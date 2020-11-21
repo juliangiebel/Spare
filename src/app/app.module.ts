@@ -17,6 +17,9 @@ import { EditProductFormComponent } from './components/edit-product-form/edit-pr
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { SearchComponent } from './components/search/search.component';
+import { ProductFeedComponent } from './components/product-feed/product-feed.component';
+import { CategoryCardsComponent } from './components/category-cards/category-cards.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { environment } from 'src/environments/environment';
     ProductDetailsViewComponent,
     NavigationComponent,
     EditProductViewComponent,
-    EditProductFormComponent
+    EditProductFormComponent,
+    SearchComponent,
+    ProductFeedComponent,
+    CategoryCardsComponent
   ],
   imports: [
     BrowserModule,
