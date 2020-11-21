@@ -1,0 +1,11 @@
+.no-shadow {
+  box-shadow: none;
+}
+
+.no-shadow::before, .no-shadow::after {
+  background-image: none;
+}
+
+.no-border {
+  border: none;
+}
