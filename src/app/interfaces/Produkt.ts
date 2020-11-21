@@ -1,6 +1,7 @@
 import { AngularFirestore } from '@angular/fire/firestore';
 
 export class Produkt {
+    ProduktID: string;
     AnbieterID: string;
     Einheit: string;
     Füllmenge: number;
@@ -10,12 +11,14 @@ export class Produkt {
     Preis: number;
 
     constructor(
+        ProduktID: string,
         AnbieterID: string, 
         Einheit: string, 
         Füllmenge: number, 
         GesamtMenge: number, 
         MHD: Date, Name: string,
         Preis: number) {
+            this.ProduktID = ProduktID;
             this.AnbieterID = AnbieterID;
             this.Einheit = Einheit;
             this.Füllmenge = Füllmenge;

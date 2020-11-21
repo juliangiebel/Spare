@@ -1,3 +1,4 @@
+import { ReturnStatement } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Produkt } from '../interfaces/Produkt';
@@ -22,6 +23,22 @@ export class ProductService {
   }
 
   getAllData() {
-    this.firebase.collection<any>(this.PRODUKTECOLLECTION);
+    // return new Promise(async (resovle, reject) => {
+
+      this.firebase.collection<any>(this.PRODUKTECOLLECTION).ref.get().then(async snapshot => {
+        snapshot.forEach( async doc => {
+          const data = doc.data();
+          const produkt: Produkt = {
+            ProduktID: doc.id,
+            AnbieterID: data.AnbieterID,
+            Einheit: data.Einheit,
+            Füllmenge: data.Füllmenge,
+            GesamtMenge: data.GesamtMenge,
+            MHD: data.MHD,
+            Name: data.Name,
+            Preis: data.Preis
+          };
+        });
+      });
   }
 }
