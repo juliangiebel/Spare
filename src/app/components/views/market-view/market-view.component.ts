@@ -9,7 +9,13 @@ export class MarketViewComponent implements OnInit {
 
   constructor() { }
 
+  test: string = "Hello World";
+
   ngOnInit(): void {
+  }
+
+  public OnClick() {
+    this.test = "test";
   }
 
 }
