@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Produkt } from 'src/app/interfaces/Produkt';
 
 @Component({
@@ -9,7 +10,11 @@ import { Produkt } from 'src/app/interfaces/Produkt';
 export class ProductDetailsViewComponent implements OnInit {
 
   produkt: Produkt;
-  constructor() { }
+  constructor(
+    private router: Router
+  ) {
+    this.produkt = this.router.getCurrentNavigation().extras.queryParams.product;
+   }
 
   ngOnInit(): void {
   }

@@ -29,7 +29,7 @@ export class ProductsViewComponent implements OnInit {
     // So ok?
     const navigationExtras: NavigationExtras = {
       queryParams: {
-        cate: name
+        product: produkt
       }
     };
     this.router.navigate(['products-details-view'], navigationExtras);
