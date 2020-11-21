@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Produkt } from 'src/app/interfaces/Produkt';
 
 @Component({
   selector: 'app-product-details-view',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailsViewComponent implements OnInit {
 
+  produkt: Produkt;
   constructor() { }
 
   ngOnInit(): void {

@@ -24,10 +24,13 @@ export class ProductService {
 
   getAllData() {
     // return new Promise(async (resovle, reject) => {
+      const produktList = new Array<Produkt>();
 
       this.firebase.collection<any>(this.PRODUKTECOLLECTION).ref.get().then(async snapshot => {
         snapshot.forEach( async doc => {
           const data = doc.data();
+          console.log('Produkt: ', data.Name);
+
           const produkt: Produkt = {
             ProduktID: doc.id,
             AnbieterID: data.AnbieterID,
@@ -38,7 +41,9 @@ export class ProductService {
             Name: data.Name,
             Preis: data.Preis
           };
+          produktList.push(produkt);
         });
       });
+      return produktList;
   }
 }
