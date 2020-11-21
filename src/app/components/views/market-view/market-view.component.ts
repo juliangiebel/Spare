@@ -13,9 +13,11 @@ export class MarketViewComponent implements OnInit {
   ) { }
 
   categories: string[] = [
-    "test1",
-    "test2"
-  ]
+    "Gemüse",
+    "Obst",
+    "Nüsse",
+    "Getreide"
+  ];
 
   ngOnInit(): void {
   }

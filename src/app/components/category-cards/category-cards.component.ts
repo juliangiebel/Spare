@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
@@ -8,12 +8,7 @@ import { NavigationExtras, Router } from '@angular/router';
 })
 export class CategoryCardsComponent implements OnInit {
 
-  categories: string[] = [
-    "Gemüse",
-    "Obst",
-    "Nüsse",
-    "Getreide"
-  ]
+  @Input() categories: string[];
 
   constructor(private router: Router) { }
 
