@@ -1,7 +1,14 @@
-<p>products-view works!</p>
+<ion-header>
+    <ion-toolbar>
+      <ion-title>{{this.productCategory}}</ion-title>
+    </ion-toolbar>
+</ion-header>
 
 <ion-content>
-    <div *ngFor="let produkt of productList" (click)="navigateToProduct(produkt)">
-        {{produkt.Name}}
-    </div>
+    <ion-list *ngFor="let produkt of productList" >
+        <ion-item (click)="navigateToProduct(produkt)">
+            <ion-label> {{produkt.Name}}</ion-label>
+            <ion-note></ion-note>
+        </ion-item>
+    </ion-list>
 </ion-content>
