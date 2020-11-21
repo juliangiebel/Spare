@@ -46,4 +46,34 @@ export class ProductService {
       });
       return produktList;
   }
+
+  getAllDataCate(cate: string){
+
+      if (cate === 'alles'){
+        return this.getAllData();
+      }
+      const produktList = new Array<Produkt>();
+
+      this.firebase.collection<any>(this.PRODUKTECOLLECTION, ref =>
+        ref.where('Kategorie', '==', cate)).ref.get().then(
+          async snapshot => {
+          snapshot.forEach( async doc => {
+            const data = doc.data();
+            console.log('Produkt: ', data.Name);
+
+            const produkt: Produkt = {
+              ProduktID: doc.id,
+              AnbieterID: data.AnbieterID,
+              Einheit: data.Einheit,
+              Füllmenge: data.Füllmenge,
+              GesamtMenge: data.GesamtMenge,
+              MHD: data.MHD,
+              Name: data.Name,
+              Preis: data.Preis
+            };
+            produktList.push(produkt);
+        });
+      });
+      return produktList;
+  }
 }

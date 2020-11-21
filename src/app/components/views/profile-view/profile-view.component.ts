@@ -41,11 +41,10 @@ export class ProfileViewComponent implements OnInit {
     // So ok?
     const navigationExtras: NavigationExtras = {
       queryParams: {
-        cate: name
+        productID: produkt.ProduktID
       }
     };
     this.router.navigate(['products-details-view'], navigationExtras);
-
   }
 
 }

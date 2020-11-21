@@ -11,18 +11,25 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductsViewComponent implements OnInit {
 
   productList: Array<Produkt>;
+  productCategory: string;
+
   constructor(
     private productService: ProductService,
     private router: Router
     ) {
     this.fillProducts();
+    this.productCategory = this.router.getCurrentNavigation().extras.queryParams.cate;
    }
 
   ngOnInit(): void {
   }
 
   fillProducts(){
-    this.productList = this.productService.getAllData();
+    if (this.productCategory){
+      this.productList = this.productService.getAllDataCate(this.productCategory);
+    }else {
+      this.productList = this.productService.getAllData();
+    }
   }
 
   navigateToProduct(produkt: Produkt){

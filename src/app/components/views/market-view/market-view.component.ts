@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-market-view',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarketViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   test: string = "Hello World";
 
@@ -18,4 +21,14 @@ export class MarketViewComponent implements OnInit {
     this.test = "test";
   }
 
+
+  navigateToProductList(category: string){
+    // So ok?
+    const navigationExtras: NavigationExtras = {
+      queryParams: {
+        cate: category
+      }
+    };
+    this.router.navigate(['products-details-view'], navigationExtras);
+  }
 }
