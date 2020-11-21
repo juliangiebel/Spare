@@ -1,4 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: SFProText-Medium;
+  src: url("/assets/fonts/FontsFree-Net-SFProText-Medium.ttf")
+}
+
+@font-face {
+  font-family: SFProDisplay-Bold;
+  src: url("/assets/fonts/FontsFree-Net-SFProDisplay-Bold.ttf")
+}
+
+@font-face {
+  font-family: SFProText-Semibold;
+  src: url("/assets/fonts/FontsFree-Net-SFProText-Semibold.ttf")
+}
+
+@font-face {
+  font-family: SFProText-Regular;
+  src: url("/assets/fonts/FontsFree-Net-SFProText-Regular.ttf")
+}
+
 .no-shadow {
   box-shadow: none;
 }
@@ -13,4 +33,26 @@
 
 .grid {
   display: grid;
+}
+
+ion-title {
+  font-size: 34px;
+  line-height: 41px;
+  letter-spacing: 0.4px;
+  font-family: SFProDisplay-Bold;
+}
+
+.text-regular {
+  font-family: SFProText-regular;
+
+}
+
+.text-semibold {
+  font-family: SFProText-semibold;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+}
+
+.text-medium {
+  font-family: SFProText-medium;
 }

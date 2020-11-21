@@ -1,7 +1,21 @@
 .search-header {
+  position: relative;
+  color: #FFFFFF;
+  height: 140px;
+  background-image: url("/assets/images/Pumpkins.png");
+  background-color: peru;
+}
 
+.search-header>.search-title {
+  position: absolute;
+  bottom: 9px;
+  left: 13px;
 }
 
 .search-header>ion-img {
   width: 100%;
+}
+
+.search > app-search {
+  border-bottom: solid black 1px;
 }
