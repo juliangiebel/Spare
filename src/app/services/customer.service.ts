@@ -39,7 +39,7 @@ export class CustomerService {
 
   getKundeByEmail(email: string) {
     return new Promise(async (resolve, rejects) => {
-      this.firebase.collection<any>(this.KUNDENCOLLECTION, ref => 
+      // this.firebase.collection<any>(this.KUNDENCOLLECTION, ref => 
         // ref.where('Email', '==', email)).get().then(
         //   kundenDoc => {
         //     const kunde = kundenDoc.data() as Kunde;
