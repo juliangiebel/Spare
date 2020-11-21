@@ -16,7 +16,7 @@ export class ProductDetailsViewComponent implements OnInit {
     private router: Router,
     private productService: ProductService
   ) {
-    const id = this.router.getCurrentNavigation().extras.queryParams.product;
+    const id = this.router.getCurrentNavigation().extras.queryParams.productID;
     this.getProdukt(id);
    }
 
