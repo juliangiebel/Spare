@@ -23,7 +23,7 @@ export class Produkt {
             this.ProduktID = ProduktID;
             this.AnbieterID = AnbieterID;
             this.Einheit = Einheit;
-            this.Füllmenge = Füllmenge;
+            this.Fuellmenge = Füllmenge;
             this.GesamtMenge = GesamtMenge;
             this.MHD = MHD;
             this.Name = Name;

@@ -24,6 +24,7 @@
     "@firebase/firestore": "^2.0.4",
     "@ionic/angular": "^5.5.0",
     "firebase": "^8.1.1",
+    "mapbox-gl": "^1.13.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
