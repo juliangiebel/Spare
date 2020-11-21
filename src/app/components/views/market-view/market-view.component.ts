@@ -12,15 +12,13 @@ export class MarketViewComponent implements OnInit {
     private router: Router
   ) { }
 
-  test: string = "Hello World";
+  categories: string[] = [
+    "test1",
+    "test2"
+  ]
 
   ngOnInit(): void {
   }
-
-  public OnClick() {
-    this.test = "test";
-  }
-
 
   navigateToProductList(category: string){
     // So ok?

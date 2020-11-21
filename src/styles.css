@@ -42,9 +42,12 @@ ion-title {
   font-family: SFProDisplay-Bold;
 }
 
+.text-bold {
+  font-family: SFProDisplay-Bold;
+}
+
 .text-regular {
   font-family: SFProText-regular;
-
 }
 
 .text-semibold {

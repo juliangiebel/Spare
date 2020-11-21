@@ -1,0 +1,18 @@
+.category-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.category-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 81px;
+
+  border-radius: 9px;
+  background-color: #5AC8FA;
+}
+
+.category-name {
+  color: white;
+}

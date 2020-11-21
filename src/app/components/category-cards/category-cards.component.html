@@ -1,1 +1,12 @@
-<p>category-cards works!</p>
+<div class="grid category-grid">
+  <ion-card *ngFor="let category of categories" (click)="OnClick(category)" class="category-card">
+    <ion-card-title class="category-name text-bold">
+      {{category}}
+    </ion-card-title>
+  </ion-card>
+  <ion-card (click)="OnClick('alles')" class="category-card text-bold">
+    <ion-card-title class="category-name">
+      Alle
+    </ion-card-title>
+  </ion-card>
+</div>
