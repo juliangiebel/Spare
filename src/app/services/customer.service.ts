@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { rejects } from 'assert';
 import { Observable } from 'rxjs';
 import { Kunde } from '../interfaces/Kunde';
 
@@ -33,6 +34,18 @@ export class CustomerService {
     .set({kunde})
     .catch(err => {
       console.log('Error Set User', err);
+    });
+  }
+
+  getKundeByEmail(email: string) {
+    return new Promise(async (resolve, rejects) => {
+      this.firebase.collection<any>(this.KUNDENCOLLECTION, ref => 
+        // ref.where('Email', '==', email)).get().then(
+        //   kundenDoc => {
+        //     const kunde = kundenDoc.data() as Kunde;
+        //     resolve(kunde);
+        //   }
+        // );
     });
   }
 }
