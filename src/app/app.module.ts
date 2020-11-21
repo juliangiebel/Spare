@@ -14,6 +14,9 @@ import { ProductDetailsViewComponent } from './components/views/product-details-
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { EditProductViewComponent } from './components/views/edit-product-view/edit-product-view.component';
 import { EditProductFormComponent } from './components/edit-product-form/edit-product-form.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { EditProductFormComponent } from './components/edit-product-form/edit-pr
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
