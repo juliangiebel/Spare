@@ -36,7 +36,7 @@ export class ProductsViewComponent implements OnInit {
     // So ok?
     const navigationExtras: NavigationExtras = {
       queryParams: {
-        product: produkt
+        productID: produkt.ProduktID
       }
     };
     this.router.navigate(['products-details-view'], navigationExtras);
