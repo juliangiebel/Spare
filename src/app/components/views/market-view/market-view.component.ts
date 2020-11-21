@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { FeedFilterType } from "../../product-feed/product-feed.component";
 
 @Component({
   selector: 'app-market-view',
@@ -18,6 +19,9 @@ export class MarketViewComponent implements OnInit {
     "Nüsse",
     "Getreide"
   ];
+
+  distanceFilter = FeedFilterType.DISTANCE;
+  timeFilter = FeedFilterType.TIME;
 
   ngOnInit(): void {
   }

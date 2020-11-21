@@ -5,19 +5,21 @@ export class Produkt {
     AnbieterID: string;
     Einheit: string;
     Füllmenge: number;
+    Fuellmenge?: number;
     GesamtMenge: number;
     MHD: Date;
     Name: string;
     Preis: number;
+    Distanz?: number;
 
     constructor(
         ProduktID: string,
-        AnbieterID: string, 
-        Einheit: string, 
-        Füllmenge: number, 
-        GesamtMenge: number, 
+        AnbieterID: string,
+        Einheit: string,
+        Füllmenge: number,
+        GesamtMenge: number,
         MHD: Date, Name: string,
-        Preis: number) {
+        Preis: number, Distanz?: number) {
             this.ProduktID = ProduktID;
             this.AnbieterID = AnbieterID;
             this.Einheit = Einheit;
@@ -26,5 +28,7 @@ export class Produkt {
             this.MHD = MHD;
             this.Name = Name;
             this.Preis = Preis;
+            this.Distanz = Distanz;
+            this.Fuellmenge = Füllmenge;
          }
 }

@@ -1,0 +1,26 @@
+.feed-list {
+  display: flex;
+}
+
+.feed-meta {
+  display: flex;
+  justify-content: space-around;
+  font-size: 8px;
+  margin-bottom: -12px;
+}
+
+.feed-title {
+  display: flex;
+  justify-content: space-around;
+}
+
+.feed-info {
+  margin-top: 34px;
+  padding: 8px;
+}
+
+.feed-card {
+  height: 90px;
+  width: 156px;
+  border-radius: 9px;
+}

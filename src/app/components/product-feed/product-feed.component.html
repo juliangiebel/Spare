@@ -1,1 +1,23 @@
-<p>product-feed works!</p>
+<div class="feed-title">
+  <ion-text>{{name}}</ion-text>
+  <ion-text color="secondary">{{targetText}}</ion-text>
+</div>
+<div class="feed-list">
+  <div class="feed-entry" *ngFor="let product of DistanceMockData">
+    <div class="feed-meta">
+      <p>Noch 3 Tage</p>
+      <p>.</p>
+      <p>Mind. {{product.Fuellmenge}} {{product.Einheit}}</p>
+    </div>
+    <ion-card class="feed-card">
+      <div class="feed-info">
+        <ion-card-title>
+          {{product.Name}}
+        </ion-card-title>
+        <ion-card-subtitle>
+          {{product.Distanz}} km
+        </ion-card-subtitle>
+      </div>
+    </ion-card>
+  </div>
+</div>
