@@ -18,13 +18,13 @@ export class CustomerService {
 
   getKunde(id: string): Promise<Kunde> {
     return new Promise(async (resolve, reject) => {
-      this.firebase.collection(this.KUNDENCOLLECTION).ref.get().then(
+      this.firebase.collection(this.KUNDENCOLLECTION).doc(id).ref.get().then(
         kundenDoc => {
           const kunde = kundenDoc.data() as Kunde;
           resolve(kunde);
         }
-      )
-    })
+      );
+    });
   }
 
   // new kunden mit .push erstellen
