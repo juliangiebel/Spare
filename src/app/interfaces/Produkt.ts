@@ -4,7 +4,6 @@ export class Produkt {
     ProduktID: string;
     AnbieterID: string;
     Einheit: string;
-    Füllmenge: number;
     Fuellmenge?: number;
     GesamtMenge: number;
     MHD: Date;
@@ -29,6 +28,5 @@ export class Produkt {
             this.Name = Name;
             this.Preis = Preis;
             this.Distanz = Distanz;
-            this.Fuellmenge = Füllmenge;
          }
 }
