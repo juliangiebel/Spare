@@ -1,4 +1,4 @@
-ion-card-title{ 
+ion-card-title{
   color: #eeeeee;
 }
 ion-card-subtitle {
@@ -6,6 +6,7 @@ ion-card-subtitle {
 }
 .feed-list {
   display: flex;
+  overflow-x: scroll;
 }
 
 .feed-meta {
