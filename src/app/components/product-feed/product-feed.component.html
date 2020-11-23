@@ -3,9 +3,9 @@
   <ion-text color="secondary" (click)="OnClick('alles')">{{targetText}}</ion-text>
 </div>
 <div class="feed-list">
-  <div class="feed-entry" *ngFor="let product of DistanceMockData">
+  <div class="feed-entry" *ngFor="let product of products()">
     <div class="feed-meta">
-      <p>Noch 3 Tage</p>
+      <p>Noch {{TimeUntilMHD(product.MHD)}} Tage</p>
       <p>.</p>
       <p>Mind. {{product.Fuellmenge}} {{product.Einheit}}</p>
     </div>
