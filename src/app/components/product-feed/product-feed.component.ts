@@ -31,19 +31,23 @@ export class ProductFeedComponent implements OnInit {
     new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 13), "Kartoffeln", 0.6, 2),
   ];
 
-  products: Produkt[];
+  products = () => this.filter == FeedFilterType.DISTANCE ? this.DistanceMockData : this.TimeMockData;
 
   constructor() {
 
-    switch (this.filter) {
-      case FeedFilterType.DISTANCE:
-        this.products = this.DistanceMockData;
-      break;
-      case FeedFilterType.TIME:
-        this.products = this.TimeMockData;
-      break;
-    }
+    // switch (this.filter) {
+    //   case FeedFilterType.DISTANCE:
+    //     this.products = this.DistanceMockData;
+    //   break;
+    //   case FeedFilterType.TIME:
+    //     this.products = this.TimeMockData;
+    //   break;
+    // }
 
+  }
+
+  public TimeUntilMHD(mhd: Date): number {
+    return Math.trunc((mhd.valueOf() - new Date().valueOf()) /(1000*60*60*24));
   }
 
   ngOnInit(): void {
