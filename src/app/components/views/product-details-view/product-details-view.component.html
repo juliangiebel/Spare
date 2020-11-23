@@ -4,21 +4,20 @@
     </ion-toolbar>
 </ion-header>
 <ion-content class="grid">
-    <ion-thumbnail>
-        <ion-img style="width: 100%;" src="/assets/images/{{this.produkt.Name}}.png"></ion-img>
-    </ion-thumbnail>
+    <ion-img style="width: 100%;" src="/assets/images/{{this.produkt.Name}}.png"></ion-img>
+    
     <ion-list class="informations">
         <ion-item class="price">
             <ion-label>Preis</ion-label>
-            <ion-note slot="end">{{this.produkt.Preis}}</ion-note>
+            <ion-note slot="end">{{this.produkt.Preis}} €</ion-note>
         </ion-item>
         <!-- <ion-item class="location">
             <ion-label>Standort</ion-label>
             <ion-note slot="end">{{this.produkt.Location}}</ion-note>
         </ion-item> -->
         <ion-item class="durability">
-            <ion-label>Haltbarkeit</ion-label>
-            <ion-note slot="end">{{this.produkt.MHD}}</ion-note>
+            <ion-label>Haltbarkeit bis</ion-label>
+            <ion-note slot="end">{{this.produkt.MHD.toLocaleDateString()}}</ion-note>
         </ion-item>
         <!-- <ion-item class="notes">
             <ion-label>Standort</ion-label>

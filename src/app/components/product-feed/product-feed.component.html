@@ -1,6 +1,6 @@
 <div class="feed-title">
   <ion-text>{{name}}</ion-text>
-  <ion-text color="secondary">{{targetText}}</ion-text>
+  <ion-text color="secondary" (click)="OnClick('alles')">{{targetText}}</ion-text>
 </div>
 <div class="feed-list">
   <div class="feed-entry" *ngFor="let product of DistanceMockData">
@@ -10,6 +10,7 @@
       <p>Mind. {{product.Fuellmenge}} {{product.Einheit}}</p>
     </div>
     <ion-card class="feed-card">
+      <img src="/assets/images/{{this.product.Name}}.png"/>
       <div class="feed-info">
         <ion-card-title>
           {{product.Name}}

@@ -1,3 +1,9 @@
+ion-card-title{ 
+  color: #eeeeee;
+}
+ion-card-subtitle {
+  color: #ccc;
+}
 .feed-list {
   display: flex;
 }
@@ -5,7 +11,7 @@
 .feed-meta {
   display: flex;
   justify-content: space-around;
-  font-size: 8px;
+  font-size: 0.8rem;
   margin-bottom: -12px;
 }
 
@@ -17,10 +23,17 @@
 .feed-info {
   margin-top: 34px;
   padding: 8px;
+  position: relative;
+  /* background: rgba(245,245,245,0.5); */
+  backdrop-filter: blur(2px);
 }
 
 .feed-card {
   height: 90px;
   width: 156px;
   border-radius: 9px;
+}
+img {
+  position: absolute;
+  max-width: 120%;
 }

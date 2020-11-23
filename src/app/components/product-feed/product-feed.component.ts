@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 import { Produkt } from 'src/app/interfaces/Produkt';
 
 //Temporary placeholder
@@ -19,7 +20,7 @@ export class ProductFeedComponent implements OnInit {
 
  readonly DistanceMockData: Produkt[] = [
     new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 13), "Kartoffeln", 0.6, 2),
-    new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 12), "Kartoffeln", 0.6, 3),
+    new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 12), "Kürbis", 0.6, 3),
     new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 11), "Salatkopf", 0.6, 4),
     new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 10), "Rispentomaten", 0.6, 5),
   ];
@@ -28,12 +29,12 @@ export class ProductFeedComponent implements OnInit {
     new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 10), "Rispentomaten", 0.6, 5),
     new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 11), "Salatkopf", 0.6, 4),
     new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 12), "Kartoffeln", 0.6, 3),
-    new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 13), "Kartoffeln", 0.6, 2),
+    new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 13), "Kürbis", 0.6, 2),
   ];
 
   products: Produkt[];
 
-  constructor() {
+  constructor(private router: Router) {
 
     switch (this.filter) {
       case FeedFilterType.DISTANCE:
@@ -49,4 +50,13 @@ export class ProductFeedComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  OnClick(category: string) {
+    const navigationExtras: NavigationExtras = {
+      queryParams: {
+        cate: category
+      }
+    };
+    this.router.navigate(['product'], navigationExtras);
+  }
+  
 }
