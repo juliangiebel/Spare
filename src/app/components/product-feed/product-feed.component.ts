@@ -21,7 +21,7 @@ export class ProductFeedComponent implements OnInit {
  readonly DistanceMockData: Produkt[] = [
     new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 13), "Kartoffeln", 0.6, 2),
     new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 12), "Kürbis", 0.6, 3),
-    new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 11), "Salatkopf", 0.6, 4),
+    new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 11), "Spinat", 0.6, 4),
     new Produkt("1", "1", "kg", 10, 100, new Date(2021, 1, 10), "Rispentomaten", 0.6, 5),
   ];
 
